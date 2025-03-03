@@ -6,6 +6,7 @@
     "build": "vite build --mode client && vite build && cp ./.assetsignore ./dist",
     "preview": "wrangler dev",
     "deploy": "npm run build && wrangler deploy",
+    "biome:format": "biome format --fix .",
     "prepare": "husky"
   },
   "private": true,
