@@ -3,9 +3,7 @@
   "name": "cfp-honox-startpage",
   "main": "./dist/index.js",
   "compatibility_date": "2025-03-02",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": "./dist"
   }
