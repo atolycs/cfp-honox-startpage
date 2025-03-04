@@ -14,7 +14,7 @@ export default createRoute((c) => {
         <div class="object-left-top grid-cols-subgrid">
           <img
             src="https://github.com/atolycs.png"
-            class="object-none h-80 w-30 ml-auto"
+            class="rounded-2xl object-none h-80 w-30 ml-auto "
             alt=""
           />
         </div>
@@ -42,7 +42,7 @@ export default createRoute((c) => {
           </LauncherContainer>
         </div>
       </div>
-      <SearchOrJump className="object-contain ml-20" />
+      <SearchOrJump className="object-contain mr-30" />
     </div>,
   );
 });
