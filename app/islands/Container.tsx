@@ -5,11 +5,15 @@ type Props = {
   className?: string;
 };
 
+const header_css = `
+@apply text-left
+`;
+
 export const LauncherContainer: FC<Props> = ({ name, children, className }) => {
   if (children != null) {
     return (
       <ul class={className}>
-        <li class="text-left">~/{name}</li>
+        <li class={header_css}>~/{name}</li>
         {children.map((post: any) => {
           return (
             <>
@@ -23,11 +27,9 @@ export const LauncherContainer: FC<Props> = ({ name, children, className }) => {
     );
   } else {
     return (
-      <div class={className}>
-        <ul>
-          <li>~/{name}</li>
-        </ul>
-      </div>
+      <ul class={className}>
+        <li class={header_css}>~/{name}</li>
+      </ul>
     );
   }
 };
