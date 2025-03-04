@@ -18,14 +18,17 @@ export default createRoute((c) => {
             alt=""
           />
         </div>
-        <div class="col-span-1 grid grid-cols-3 gap-3">
-          <LauncherContainer name="Yes!" className="h-full bg-green-300">
-            <a href="https://www.google.com">Google!</a>
-            <a href="https://www.duckduckgo.com">DuckduckGo!</a>
-            <a href="https://www.youtube.com">YouTube!</a>
+        <div class="col-span-1 grid grid-cols-3 gap-2">
+          <LauncherContainer name="common " className="h-full bg-green-300">
+            <a href="https://www.google.com">Google</a>
+            <a href="https://www.duckduckgo.com">DuckduckGo</a>
+            <a href="https://www.youtube.com">YouTube</a>
           </LauncherContainer>
-          <LauncherContainer name="dev" className="h-full bg-teal-300" />
-          <LauncherContainer name="Yes!" className="h-full bg-red-50">
+          <LauncherContainer name="dev " className="h-full bg-teal-300">
+            <a href="https://github.com">GitHub</a>
+            <a href="https://gitlab.com">GitLab</a>
+          </LauncherContainer>
+          {/*           <LauncherContainer name="Yes!" className="h-full bg-red-50">
             <a href="https://www.google.com">Google!</a>
             <a href="https://www.duckduckgo.com">DuckduckGo!</a>
             <a href="https://www.youtube.com">YouTube!</a>
@@ -39,7 +42,7 @@ export default createRoute((c) => {
             <a href="https://www.google.com">Google!</a>
             <a href="https://www.duckduckgo.com">DuckduckGo!</a>
             <a href="https://www.youtube.com">YouTube!</a>
-          </LauncherContainer>
+          </LauncherContainer> */}
         </div>
       </div>
     </div>,

@@ -4,7 +4,3 @@
   --color-background-2: #282a36;
   --color-accent-1: #bd93f9;
 }
-
-.avatar {
-  object-view-box: inset(80px 180px 30px 20px);
-}
