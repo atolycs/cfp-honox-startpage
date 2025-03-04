@@ -1,0 +1,13 @@
+:root {
+  --color-foreground-1: #f8f8f2;
+  --color-background-2: #282a36;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  background: var(--color-background-2);
+  color: var(--color-foreground-1);
+}
