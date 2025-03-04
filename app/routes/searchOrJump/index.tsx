@@ -7,11 +7,11 @@ export default createRoute(async (c) => {
   try {
     // @ts-ignore
     const resolved_url = await postAction(urlholder);
-
     return c.redirect(resolved_url, 301);
   } catch (error) {
     return c.render(
       <div>
+        {error}
         <p> How are you? </p>
       </div>,
     );

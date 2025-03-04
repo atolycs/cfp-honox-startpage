@@ -3,6 +3,19 @@ import Counter from "../islands/counter";
 import SearchOrJump from "../islands/SerachOrJump";
 import { LauncherContainer } from "../islands/Container";
 
+import postAction from "../lib/SearchMethod";
+
+export const POST = createRoute(async (c) => {
+  const { urlholder } = await c.req.parseBody<{ urlholder: string }>();
+  try {
+    const resolved_url = postAction(urlholder);
+
+    return c.redirect(resolved_url, 301);
+  } catch (e) {
+    return c.error(e);
+  }
+});
+
 export default createRoute((c) => {
   const name = c.req.query("name") ?? "Hono";
   return c.render(

@@ -23,6 +23,6 @@ export default function postAction(urlholder: string) {
     return searchEngine + encodeURIComponent(urlholder);
   } else {
     console.log("Not Redirect");
-    throw new Error();
+    return undefined;
   }
 }

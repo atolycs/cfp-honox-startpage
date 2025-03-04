@@ -10,7 +10,7 @@ export default function SearchOrJump({ className }: Props) {
   return (
     <>
       <div class={className}>
-        <form action="/searchOrJump">
+        <form method="post">
           {text} &gt;{" "}
           <input
             type="text"
