@@ -3,19 +3,6 @@ import Counter from "../islands/counter";
 import SearchOrJump from "../islands/SerachOrJump";
 import { LauncherContainer } from "../islands/Container";
 
-import postAction from "../lib/SearchMethod";
-
-export const POST = createRoute(async (c) => {
-  const { urlholder } = await c.req.parseBody<{ urlholder: string }>();
-  try {
-    const resolved_url = postAction(urlholder);
-
-    return c.redirect(resolved_url, 301);
-  } catch (e) {
-    return c.error(e);
-  }
-});
-
 export default createRoute((c) => {
   const name = c.req.query("name") ?? "Hono";
   return c.render(
@@ -24,10 +11,10 @@ export default createRoute((c) => {
       <h1 class="text-3xl font-bold">Hello, {name}!</h1>
       <Counter />
       <div class="flex justify-center gap-2">
-        <div class="object-left-top">
+        <div class="">
           <img
             src="https://github.com/atolycs.png"
-            class="rounded-2xl object-none h-80 w-30 ml-auto "
+            class="rounded-2xl object-none object-[45%_15%] h-80 w-35 ml-auto avatar"
             alt=""
           />
         </div>
@@ -55,7 +42,6 @@ export default createRoute((c) => {
           </LauncherContainer>
         </div>
       </div>
-      <SearchOrJump className="object-contain ml-15" />
     </div>,
   );
 });
