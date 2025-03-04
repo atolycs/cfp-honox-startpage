@@ -8,12 +8,12 @@ type Props = {
 export const LauncherContainer: FC<Props> = ({ name, children, className }) => {
   if (children != null) {
     return (
-      <ul class={"justify-stretch " + className}>
+      <ul class={className}>
         <li class="text-left">~/{name}</li>
         {children.map((post: any) => {
           return (
             <>
-              <li class="text-left ml-5">
+              <li class="text-left ml-3">
                 <a href={post.props.href}>{post.props.children}</a>
               </li>
             </>
