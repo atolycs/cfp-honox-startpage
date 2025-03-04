@@ -10,15 +10,15 @@ export default createRoute((c) => {
       <title>Welcome back!</title>
       <h1 class="text-3xl font-bold">Hello, {name}!</h1>
       <Counter />
-      <div class="grid grid-cols-3 gap-2">
-        <div class="object-left-top grid-cols-subgrid">
+      <div class="flex justify-center gap-2">
+        <div class="object-left-top">
           <img
             src="https://github.com/atolycs.png"
             class="rounded-2xl object-none h-80 w-30 ml-auto "
             alt=""
           />
         </div>
-        <div class="grid grid-cols-3 gap-1">
+        <div class="col-span-1 grid grid-cols-3 gap-3">
           <LauncherContainer name="Yes!" className="h-full bg-green-300">
             <a href="https://www.google.com">Google!</a>
             <a href="https://www.duckduckgo.com">DuckduckGo!</a>

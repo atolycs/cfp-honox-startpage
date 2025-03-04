@@ -17,7 +17,7 @@ export const LauncherContainer: FC<Props> = ({ name, children, className }) => {
         {children.map((post: any) => {
           return (
             <>
-              <li class="text-left ml-3">
+              <li class="text-left indent-3">
                 <a href={post.props.href}>{post.props.children}</a>
               </li>
             </>
