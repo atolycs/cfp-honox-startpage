@@ -42,7 +42,7 @@ export default createRoute((c) => {
           </LauncherContainer>
         </div>
       </div>
-      <SearchOrJump className="object-contain mr-30" />
+      <SearchOrJump className="object-contain ml-15" />
     </div>,
   );
 });

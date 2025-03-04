@@ -1,6 +1,4 @@
-import { Context } from "hono";
-
-export default function postAction(urlholder: string, c?: Context) {
+export default function postAction(urlholder: string) {
   const searchEngine = "https://duckduckgo.com/?q=";
   console.log(`[postAction]: ${urlholder}`);
 
@@ -13,22 +11,18 @@ export default function postAction(urlholder: string, c?: Context) {
   const ip_match = urlholder?.match(isIp);
 
   if (url_match != null) {
-    return c?.redirect(
-      url_match[0].substring(0, 4) == "http"
-        ? url_match[0]
-        : "https://" + url_match[0],
-    );
+    return url_match[0].substring(0, 4) == "http"
+      ? url_match[0]
+      : "https://" + url_match[0];
   } else if (ip_match != null) {
-    return c?.redirect(
-      ip_match[0].substring(0, 4) == "http"
-        ? ip_match[0]
-        : "http://" + ip_match[0],
-    );
-  } else if (urlholder != undefined) {
+    return ip_match[0].substring(0, 4) == "http"
+      ? ip_match[0]
+      : "http://" + ip_match[0];
+  } else if (urlholder?.length > 0) {
     console.log(`Redirecting Search DuckduckGo`);
-    return c?.redirect(searchEngine + encodeURIComponent(urlholder));
+    return searchEngine + encodeURIComponent(urlholder);
   } else {
     console.log("Not Redirect");
-    return c?.render(<div>Who are you?</div>);
+    throw new Error();
   }
 }
